@@ -1,0 +1,10 @@
+services:
+    dmzx.navbar.listener:
+        class: dmzx\navbar\event\listener
+        arguments:
+            - @dbal.conn
+            - @template
+            - @user
+            - %core.root_path%
+        tags:
+            - { name: event.listener }
